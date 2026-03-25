@@ -1,0 +1,68 @@
+Nearest Location Allocation - ML Project Information
+
+Project Name: FixItPro
+
+1. Project Overview
+FixItPro connects clients with service providers for home appliance services.
+The ML goal is to allocate the best available provider for each client request.
+
+2. Main Roles
+- Admin
+- Service Provider
+- Client
+
+3. Problem Statement
+When a client requests a service (for example TV repair, TV installation, fridge repair, fridge installation),
+the system should automatically allocate the most suitable service provider.
+
+4. Core Allocation Parameters
+1. Availability
+	Provider must be currently available.
+
+2. Service Match
+	Provider skill must match the requested service type.
+
+3. Provider Rating
+	Higher-rated providers should be preferred.
+
+4. Distance
+	Nearest provider to the client service location should be prioritized.
+
+5. Required Data for Model
+Provider-side data:
+- Provider ID
+- Skills / service categories
+- Current location (latitude, longitude)
+- Availability status
+- Rating score
+- Optional: response time, acceptance rate, completed jobs
+
+Client request data:
+- Request ID
+- Requested service type
+- Service location (latitude, longitude)
+- Request timestamp
+
+Historical outcome data (for training):
+- Allocated provider ID
+- Allocation success/failure
+- Job completion status
+- Client feedback/rating
+- Time to accept and complete
+
+6. Suggested ML Objective
+Build a ranking model that scores candidate providers for each request and returns the best match.
+
+7. Basic Allocation Rule (Fallback)
+If ML confidence is low, use rule-based sorting:
+1. Filter available providers
+2. Filter matching service skill
+3. Sort by distance (ascending)
+4. Break ties by rating (descending)
+
+8. Success Metrics
+- Allocation acceptance rate
+- Job completion rate
+- Average provider-client distance
+- Average allocation time
+- Client satisfaction score
