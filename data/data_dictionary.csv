@@ -1,0 +1,17 @@
+column,description
+request_id,Unique request identifier
+request_time,Timestamp of request
+service_type,Type of service requested
+client_lat,Client latitude
+client_lon,Client longitude
+provider_id,Provider identifier
+provider_lat,Provider latitude
+provider_lon,Provider longitude
+is_available,Provider availability (0/1)
+has_skill_match,Skill match (0/1)
+provider_rating,Rating of provider
+distance_km,Distance between client and provider
+acceptance_rate_30d,Acceptance rate in last 30 days
+avg_response_time_min,Average response time
+completed_jobs_90d,Completed jobs in 90 days
+selected_label,"1 if selected, else 0"

@@ -11,17 +11,6 @@ venv/
 env/
 
 # ==============================
-# Data Files (large files)
-# ==============================
-data/*.csv
-data/*.pkl
-
-# ==============================
-# Model Files
-# ==============================
-models/*.pkl
-
-# ==============================
 # Logs
 # ==============================
 *.log
@@ -47,3 +36,12 @@ Thumbs.db
 # Environment Variables
 # ==============================
 .env
+
+# ==============================
+# Generated ML datasets
+# ==============================
+data/candidate_allocations.csv
+data/train.csv
+data/valid.csv
+data/test.csv
+
